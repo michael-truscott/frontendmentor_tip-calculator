@@ -32,3 +32,115 @@ p, h1, h2, h3, h4, h5, h6 {
 /*
   App styles
 */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+  --col-strong-cyan: hsl(172, 67%, 45%);
+  --col-very-dark-cyan: hsl(183, 100%, 15%);
+  --col-dark-gray-cyan: hsl(186, 14%, 43%);
+  --col-light-gray-cyan: hsl(185, 41%, 84%);
+  --col-very-light-gray-cyan: hsl(189, 41%, 97%);
+  --col-white: hsl(0, 0%, 100%);
+}
+
+p {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  color: var(--col-dark-gray-cyan);
+}
+
+input {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  border: none;
+  background-color: var(--col-very-light-gray-cyan);
+  color: var(--col-very-dark-cyan);
+  width: 100%;
+  padding: 0.25rem 1rem;
+  border-radius: 8px;
+  text-align: end;
+}
+
+button {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: var(--col-very-dark-cyan);
+  border-radius: 4px;
+  color: var(--col-white);
+  border: none;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.btn-highlighted {
+  background-color: var(--col-strong-cyan);
+  color: var(--col-very-dark-cyan);
+}
+
+.App {
+  background-color: var(--col-light-gray-cyan);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AppLogo {
+  padding: 48px 0;
+}
+
+.TipCalculator {
+  background-color: var(--col-white);
+  width: 700px;
+  max-width: 100%;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 1rem;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.InputGroup {
+  padding: 1rem;
+}
+
+.TipPercentSection__choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.TotalDisplay {
+  background-color: var(--col-very-dark-cyan);
+  border-radius: 16px;
+  padding: 1.5rem;
+  padding-top: 2.5rem;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.TotalDisplay__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TotalDisplay__title {
+  color: var(--col-white);
+}
+
+.TotalDisplay__per-person {
+  font-size: 0.825rem;
+  color: var(--col-dark-gray-cyan);
+}
+
+.TotalDisplay__amount {
+  font-size: 2rem;
+  color: var(--col-strong-cyan);
+}
+
+.TotalDisplay__reset-btn {
+  font-size: 1.25rem;
+}

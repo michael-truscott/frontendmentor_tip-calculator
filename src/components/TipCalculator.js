@@ -1,6 +1,6 @@
 export default function TipCalculator() {
   return (
-    <div>
+    <div className="TipCalculator">
       <BillAmountField />
       <TipPercentSection />
       <NumOfPeopleField />
@@ -11,56 +11,58 @@ export default function TipCalculator() {
 
 function BillAmountField() {
   return (
-    <div>
+    <div className="InputGroup">
       <p>Bill</p>
-      <input type="number" />
+      <input type="number" value={142.55} />
     </div>
   );
 }
 
 function TipPercentSection() {
   return (
-    <div>
+    <div className="InputGroup">
       <p>Select Tip %</p>
-      <button>5%</button>
-      <button>10%</button>
-      <button>15%</button>
-      <button>25%</button>
-      <button>50%</button>
-      <button>Custom</button>
+      <div className="TipPercentSection__choices">
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <input type="number" placeholder="Custom" />
+      </div>
     </div>
   );
 }
 
 function NumOfPeopleField() {
   return (
-    <div>
+    <div className="InputGroup">
       <p>Number of People</p>
-      <input type="number" />
+      <input type="number" value={5} />
     </div>
   );
 }
 
 function TotalDisplay() {
   return (
-    <div>
-      <div>
+    <div className="TotalDisplay">
+      <div className="TotalDisplay__group">
         <div>
-          <p>Tip Amount</p>
-          <p>/ person</p>
+          <p className="TotalDisplay__title">Tip Amount</p>
+          <p className="TotalDisplay__per-person">/ person</p>
         </div>
-        <p>$4.27</p>
+        <p className="TotalDisplay__amount">{"$4.27"}</p>
       </div>
 
-      <div>
+      <div className="TotalDisplay__group">
         <div>
-          <p>Total</p>
-          <p>/ person</p>
+          <p className="TotalDisplay__title">Total</p>
+          <p className="TotalDisplay__per-person">/ person</p>
         </div>
-        <p>$32.79</p>
+        <p className="TotalDisplay__amount">{"$32.79"}</p>
       </div>
 
-      <button>Reset</button>
+      <button className={"TotalDisplay__reset-btn " + (true && "btn-highlighted")}>Reset</button>
     </div>
   );
 }
