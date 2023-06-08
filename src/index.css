@@ -207,8 +207,17 @@ button:disabled {
 }
 
 @media screen and (min-width: 700px) {
+  button, input {
+    font-size: 1.25rem;
+  }
+
   .AppLogo {
     padding-bottom: 80px;
+  }
+
+  /* pushes the app content closer into the center to compensate for the logo */
+  .App__spacer {
+    height: 100px;
   }
 
   .TipCalculator {
@@ -221,6 +230,10 @@ button:disabled {
 
   .TipPercentSection__choices {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .TotalDisplay {
+    padding: 2.5rem;
   }
 
   .TotalDisplay__info {

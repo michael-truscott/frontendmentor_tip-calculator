@@ -6,6 +6,8 @@ function App() {
     <div className="App">
       <AppLogo />
       <TipCalculator />
+      <div className="App__spacer">
+      </div>
     </div>
   );
 }
