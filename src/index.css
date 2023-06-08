@@ -49,6 +49,16 @@ p {
   color: var(--col-dark-gray-cyan);
 }
 
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(20px, -50%);
+}
+
 input {
   font-family: 'Space Mono', monospace;
   font-size: 1.5rem;
@@ -103,6 +113,8 @@ button {
 
 .InputGroup {
   padding: 1rem;
+  display: grid;
+  row-gap: 8px;
 }
 
 .TipPercentSection__choices {

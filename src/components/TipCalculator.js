@@ -1,3 +1,6 @@
+import dollarIcon from "../images/icon-dollar.svg";
+import personIcon from "../images/icon-person.svg";
+
 export default function TipCalculator() {
   return (
     <div className="TipCalculator">
@@ -13,7 +16,10 @@ function BillAmountField() {
   return (
     <div className="InputGroup">
       <p>Bill</p>
-      <input type="number" value={142.55} />
+      <div className="input-container">
+        <img className="input-icon" src={dollarIcon} alt="" />
+        <input type="number" min={0} step={0.01} value={142.55} />
+      </div>
     </div>
   );
 }
@@ -25,7 +31,7 @@ function TipPercentSection() {
       <div className="TipPercentSection__choices">
         <button>5%</button>
         <button>10%</button>
-        <button>15%</button>
+        <button className="btn-highlighted">15%</button>
         <button>25%</button>
         <button>50%</button>
         <input type="number" placeholder="Custom" />
@@ -38,7 +44,10 @@ function NumOfPeopleField() {
   return (
     <div className="InputGroup">
       <p>Number of People</p>
-      <input type="number" value={5} />
+      <div className="input-container">
+        <img className="input-icon" src={personIcon} alt="" />
+        <input type="number" value={5} />
+      </div>
     </div>
   );
 }
