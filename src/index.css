@@ -105,9 +105,14 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:hover:enabled {
   background-color: var(--col-hover-cyan);
   color: var(--col-very-dark-cyan);
+}
+
+button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
 }
 
 .btn-highlighted {
