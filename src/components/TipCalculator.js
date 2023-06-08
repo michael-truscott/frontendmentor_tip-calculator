@@ -25,9 +25,11 @@ export default function TipCalculator() {
   
   return (
     <div className="TipCalculator">
-      <BillAmountField billAmount={billAmount} setBillAmount={setBillAmount} />
-      <TipPercentSection tipPercent={tipPercent} setTipPercent={setTipPercent} />
-      <NumOfPeopleField numPeople={numPeople} setNumPeople={setNumPeople} error={numPeople === 0} />
+      <div className="TipCalculator__input-container">
+        <BillAmountField billAmount={billAmount} setBillAmount={setBillAmount} />
+        <TipPercentSection tipPercent={tipPercent} setTipPercent={setTipPercent} />
+        <NumOfPeopleField numPeople={numPeople} setNumPeople={setNumPeople} error={numPeople === 0} />
+      </div>
       <TotalDisplay tipAmount={tipAmount} total={total} onResetClicked={onResetClicked} resetDisabled={resetDisabled} />
     </div>
   );
@@ -97,20 +99,22 @@ function NumOfPeopleField({numPeople, setNumPeople, error}) {
 function TotalDisplay({tipAmount, total, onResetClicked, resetDisabled}) {
   return (
     <div className="TotalDisplay">
-      <div className="TotalDisplay__group">
-        <div>
-          <p className="TotalDisplay__title">Tip Amount</p>
-          <p className="TotalDisplay__per-person">/ person</p>
+      <div className="TotalDisplay__info">
+        <div className="TotalDisplay__group">
+          <div>
+            <p className="TotalDisplay__title">Tip Amount</p>
+            <p className="TotalDisplay__per-person">/ person</p>
+          </div>
+          <p className="TotalDisplay__amount">{tipAmount}</p>
         </div>
-        <p className="TotalDisplay__amount">{tipAmount}</p>
-      </div>
 
-      <div className="TotalDisplay__group">
-        <div>
-          <p className="TotalDisplay__title">Total</p>
-          <p className="TotalDisplay__per-person">/ person</p>
+        <div className="TotalDisplay__group">
+          <div>
+            <p className="TotalDisplay__title">Total</p>
+            <p className="TotalDisplay__per-person">/ person</p>
+          </div>
+          <p className="TotalDisplay__amount">{total}</p>
         </div>
-        <p className="TotalDisplay__amount">{total}</p>
       </div>
 
       <button className={"TotalDisplay__reset-btn " + (true && "btn-highlighted")} onClick={onResetClicked}
