@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/frontendmentor_tip-calculator/static/css/main.0e123cf8.css",
+    "main.js": "/frontendmentor_tip-calculator/static/js/main.da19daa5.js",
+    "static/js/787.cb72db92.chunk.js": "/frontendmentor_tip-calculator/static/js/787.cb72db92.chunk.js",
+    "static/media/logo.svg": "/frontendmentor_tip-calculator/static/media/logo.3cc0528bd46321d63d85702006069614.svg",
+    "static/media/icon-dollar.svg": "/frontendmentor_tip-calculator/static/media/icon-dollar.9f9be3534a9295a6595764d63a7bf3a3.svg",
+    "static/media/icon-person.svg": "/frontendmentor_tip-calculator/static/media/icon-person.65bfd20465dd1d2cb58c0b53e1160442.svg",
+    "index.html": "/frontendmentor_tip-calculator/index.html",
+    "main.0e123cf8.css.map": "/frontendmentor_tip-calculator/static/css/main.0e123cf8.css.map",
+    "main.da19daa5.js.map": "/frontendmentor_tip-calculator/static/js/main.da19daa5.js.map",
+    "787.cb72db92.chunk.js.map": "/frontendmentor_tip-calculator/static/js/787.cb72db92.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e123cf8.css",
+    "static/js/main.da19daa5.js"
+  ]
+}
