@@ -6,7 +6,7 @@ export default function TipCalculator() {
     <div className="TipCalculator">
       <BillAmountField />
       <TipPercentSection />
-      <NumOfPeopleField />
+      <NumOfPeopleField error={true} />
       <TotalDisplay />
     </div>
   );
@@ -40,13 +40,16 @@ function TipPercentSection() {
   );
 }
 
-function NumOfPeopleField() {
+function NumOfPeopleField({error}) {
   return (
     <div className="InputGroup">
-      <p>Number of People</p>
+      <div className="flex-row">
+        <p>Number of People</p>
+        { error && <p className="error-text">Can't be zero</p> }
+      </div>
       <div className="input-container">
         <img className="input-icon" src={personIcon} alt="" />
-        <input type="number" value={5} />
+        <input className={error && "error"} type="number" value={5} />
       </div>
     </div>
   );

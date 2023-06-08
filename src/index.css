@@ -40,6 +40,8 @@ p, h1, h2, h3, h4, h5, h6 {
   --col-dark-gray-cyan: hsl(186, 14%, 43%);
   --col-light-gray-cyan: hsl(185, 41%, 84%);
   --col-very-light-gray-cyan: hsl(189, 41%, 97%);
+  --col-hover-cyan: rgb(157, 233, 233);
+  --col-input-error-outline: #B48372;
   --col-white: hsl(0, 0%, 100%);
 }
 
@@ -47,6 +49,12 @@ p {
   font-family: 'Space Mono', monospace;
   font-size: 1rem;
   color: var(--col-dark-gray-cyan);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .input-container {
@@ -69,6 +77,19 @@ input {
   padding: 0.25rem 1rem;
   border-radius: 8px;
   text-align: end;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: 2px solid var(--col-strong-cyan);
+}
+
+input.error:focus {
+  outline: 2px solid var(--col-input-error-outline);
+}
+
+.error-text {
+  color: var(--col-input-error-outline);
 }
 
 button {
@@ -81,6 +102,12 @@ button {
   border: none;
   width: 100%;
   padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--col-hover-cyan);
+  color: var(--col-very-dark-cyan);
 }
 
 .btn-highlighted {
